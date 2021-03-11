@@ -84,7 +84,10 @@ IndexOf : retournera la première position obtenue lorsque l'élément a été v
 
 Sort :  triera le tableau par ordre alphabétique.
 
---------------------------------------------------------------------------------------------------BOUCLES-----------------------------------------------------------------------------------
+ToLowerCase : met le texte d'un tableau en minuscule.
+
+ToUpperCase : met le texte en majuscule.
+------------------------------------------------------------------------------------------BOUCLES-----------------------------------------------------------------------------------
 
 La déclaration for nécessite 3 paramètres pour fonctionner:
 
@@ -95,3 +98,30 @@ La seconde est la condition que nous voulons atteindre avant d'arrêter la boucl
 Et la troisième est l'incrément. L'incrément sera exécuté à la fin de chaque boucle et, généralement, nous ajoutons un à l'itérateur.
 
 (i++) = (i+=1)   pour augmenter plus rapidement  (ex: i+=10).
+
+--------------------------------------------------------------------------------------------D O M-------------------------------------------------------------------------------------------------------
+																					Document Object Model
+
+QuerySelector :  entre parenthèses, il suffit d'écrire le sélecteur souhaité.
+
+InnerHTML : modifie le contenue d'une balise HTML.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const firstNames = ["Bob", "Jimmy", "Harry"];
+const lastNames = ["Marley", "Hendrix", "Potter"];
+
+function setFullName(i){
+    let fullName = firstNames[i] + " " + lastNames[i];
+    return fullName;
+}
+
+const fullNameTab = []
+
+let i = 0 ;
+while (firstNames[i]) { //!== false, undefined, null
+    let fullName = setFullName(i); 
+    fullNameTab.push(setFullName(i));
+    console.log(setFullName(i));
+    i++;
+}
